@@ -3,19 +3,16 @@ import numpy as np
 
 def troca_linha(M, i, j):
     M[[i, j], :] = M[[j, i], :]
-
     return M
 
 
 def divide_linha(M, i, k):
     M[i, :] = M[i, :] / k
-
     return M
 
 
 def subtrai_linha(M, i, j, k=1):
     M[i, :] = M[i, :] - k * M[j, :]
-
     return M
 
 
@@ -80,7 +77,6 @@ def gauss_jordan(A, b):
                     return "O Sistema possui infinitas soluções", A
 
             return "O Sistema não possui solução", A
-
     return A
 
 
